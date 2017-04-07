@@ -24,6 +24,9 @@ The adapter also uses `babel-plugin-module-resolver` to expose Fractal's compone
 
 ```javascript
 import Button from '@button';
+```
+
+```javascript
 const Button = require('@button');
 ```
 
