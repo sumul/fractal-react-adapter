@@ -1,6 +1,6 @@
 {
   "name": "fractal-react-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use React as the template engine for Fractal components.",
   "main": "index.js",
   "repository": {
