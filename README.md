@@ -4,15 +4,15 @@ This adapter lets you use React as a template engine in [Fractal](http://fractal
 
 Plug it into your `fractal.js` file like so: 
 
-```
+```javascript
 const reactAdapter = require('fractal-react-adapter')();
 fractal.components.engine(reactAdapter);
 fractal.components.set('ext', '.jsx');
 ```
 
-The adapter uses Babel to compile React components via `babel-register` (which hooks into `require` or `import` and automatically routes those files through Babel). By default, `babel-register` is configured to compile `.jsx` files and use the `react` and `es2015` Babel presets, but you can override these with any valid `babel-register` config (see Configuration below).
+The adapter uses [Babel](https://babeljs.io) to compile React components via [babel-register](https://babeljs.io/docs/usage/babel-register/) (which hooks into `require` or `import` and automatically routes those files through Babel). By default, `babel-register` is configured to compile `.jsx` files and use the `react` and `es2015` Babel presets, but you can override these with any valid `babel-register` config (see Configuration below).
 
-```
+```javascript
 // Default babel-register config
 {
   extensions: [".jsx"],
@@ -22,7 +22,7 @@ The adapter uses Babel to compile React components via `babel-register` (which h
 
 The adapter also uses `babel-plugin-module-resolver` to expose Fractal's component handles as node module names. This allows you to move a component around in the file system without worrying about rewriting your imports.
 
-```
+```javascript
 import Button from '@button';
 const Button = require('@button');
 ```
@@ -34,7 +34,7 @@ These options can be overridden when the adapter is set up.
 * `babelConfig`: any valid configuration options for [babel-register](https://babeljs.io/docs/usage/babel-register/)
 * `renderMethod`: `'renderToStaticMarkup'` or `'renderToString'` (see [ReactDOMServer](https://facebook.github.io/react/docs/react-dom-server.html))
 
-```
+```javascript
 const reactAdapter = require('fractal-react-adapter')({
   babelConfig: {
     presets: ['es2015', 'react', 'stage-0']
@@ -47,7 +47,7 @@ const reactAdapter = require('fractal-react-adapter')({
 
 ### A simple button component
 
-```
+```javascript
 import React from 'react';
  
 class Button extends React.Component {
@@ -61,7 +61,7 @@ module.exports = Button;
 
 ### A card component that uses the button
 
-```
+```javascript
 import React from 'react';
 import Button from '@button'
 
