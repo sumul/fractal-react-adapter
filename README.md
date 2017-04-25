@@ -2,6 +2,14 @@
 
 This adapter lets you use React as a template engine in [Fractal](http://fractal.build). It's based on Fractal's [Handlebars adapter](https://github.com/frctl/handlebars). This adapter aims to maintain a React flavor rather than achieve complete feature parity with the Handlebars adapter. The goal is to facilitate writing React components that can easily be used in other projects.
 
+## Installation
+
+Install the adapter via NPM:
+
+```
+npm i --save fractal-react-adapter
+```
+
 Plug it into your `fractal.js` file like so: 
 
 ```javascript
