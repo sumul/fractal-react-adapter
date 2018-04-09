@@ -6,7 +6,7 @@ const Adapter     = require('@frctl/fractal').Adapter;
 const React       = require('react');
 const ReactDOM    = require('react-dom/server');
 const prettyPrint = require('html').prettyPrint;
-const babelReg    = require('babel-register');
+const babelReg    = require('@babel/register');
 
 
 /*
